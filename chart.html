@@ -1,0 +1,64 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script type="text/javascript" src="chart.js"></script>
+
+    <style type="text/css">
+      
+      #columnchart_material {
+        margin: 0 auto;
+      }
+      #header, h2 {
+        background: #2e86c1 ;
+        color:  #fdfefe  ;
+        width: 800px; 
+        height: 30px;   
+        text-align: center;
+        margin: 0 auto;
+      }
+
+      #dropdown{
+        margin: 0 auto;
+        width: 30%; 
+        margin-top: 2em;
+      }
+    </style>
+
+  </head>
+  <body>
+    <div>
+      <div id="header">
+        <table>
+            <td><p style="margin-left: 20px; color:  #fdfefe; font-size:24px"><i class="fa fa-bars"></i></p></td>
+            <td><i class="fa fa-circle" style="font-size:25px;color:red"></i></td>
+            <td><h2>Sales Report</h2></td>          
+        </table>
+
+      </div>
+      <div id="dropdown">
+        <table>
+          <tr>
+            <td>
+             <label>Category: </label><select id="category" style="margin-right: 12px" onchange="product(this.id, 'product')">
+              <option value=""></option>
+              <option value="1">Comida</option>
+              <option value="2">Ropa</option>
+            </select>             
+            </td>
+            <td>
+             <label>Product: </label><select id="product" style="margin-right: 12px" onchange="brand(this.id, 'brand')"></select>             
+            </td>
+            <td>
+             <label>Brand: </label><select id="brand"></select>             
+            </td>
+          </tr>
+        </table>
+
+
+    </div>
+      <div id="columnchart_material" style="width: 800px; height: 500px; "></div>
+    </div>
+  </body>
+</html>
