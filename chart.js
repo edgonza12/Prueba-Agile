@@ -3,8 +3,8 @@
 google.charts.load('current', {'packages':['bar']});
 google.charts.setOnLoadCallback(drawChart);
 
-function drawChart() {
-  var data = google.visualization.arrayToDataTable([
+function drawChart() { //Esta funcion crea el chart 
+  var data = google.visualization.arrayToDataTable([ //Se define el array con los valores de los charts
     ['Mes', 'Enero'],
     ['Enero', 1000],
     ['Febrero', 250],
@@ -21,7 +21,7 @@ function drawChart() {
   chart.draw(data, google.charts.Bar.convertOptions(options));
 }
 
-function product(id, name){
+function product(id, name){ //Esta Funcion valida la categoria seleccionada, toma el Id y el nombre del select a llenar
   var id = document.getElementById(id);
   var name = document.getElementById(name);
   name.innerHTML = "";
@@ -39,7 +39,7 @@ function product(id, name){
 }
 
 
-function brand(id, name){
+function brand(id, name){//Esta Funcion valida el producto seleccionado y llena la marca
   var id = document.getElementById(id);
   var name = document.getElementById(name);
   name.innerHTML = "";
